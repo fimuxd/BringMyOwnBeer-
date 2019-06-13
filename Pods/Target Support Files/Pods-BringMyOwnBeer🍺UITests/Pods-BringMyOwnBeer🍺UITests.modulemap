@@ -1,0 +1,6 @@
+framework module Pods_BringMyOwnBeer_UITests {
+  umbrella header "Pods-BringMyOwnBeer🍺UITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

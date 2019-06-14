@@ -27,6 +27,6 @@ protocol PunkService {
     typealias BeerResult<T> = Result<T, PunkServiceError>
     
     func getBeers(components: BeerFilterComponents, page: Int?, perPage: Int?) -> Single<BeerResult<[Beer]>>
-    func getSingleBeer(id: String) -> Single<BeerResult<Beer>>
-    func getRandomBeer() -> Single<BeerResult<Beer>>
+    func getSingleBeer(id: String) -> Single<BeerResult<[Beer]>>
+    func getRandomBeer() -> Single<BeerResult<[Beer]>>
 }

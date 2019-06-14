@@ -26,17 +26,17 @@ class PunkRepositoryImpl: PunkRepository {
             .map([Beer].self)
     }
     
-    func getSingleBeer(id: String) -> Single<Beer> {
+    func getSingleBeer(id: String) -> Single<[Beer]> {
         return self.provider.rx
             .request(.getSingleBeer(id: id))
             .filterSuccessfulStatusCodes()
-            .map(Beer.self)
+            .map([Beer].self)
     }
     
-    func getRandomBeer() -> Single<Beer> {
+    func getRandomBeer() -> Single<[Beer]> {
         return self.provider.rx
             .request(.getRandomBeer)
             .filterSuccessfulStatusCodes()
-            .map(Beer.self)
+            .map([Beer].self)
     }
 }

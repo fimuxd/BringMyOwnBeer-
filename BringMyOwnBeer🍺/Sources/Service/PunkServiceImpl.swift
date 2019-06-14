@@ -20,9 +20,7 @@ class PunkServiceImpl: PunkService {
     func getBeers(components: BeerFilterComponents, page: Int?, perPage: Int?) -> Single<BeerResult<[Beer]>> {
         return punkRepo
             .getBeers(components: components, page: page, perPage: perPage)
-            .debug("xxx0")
             .map { .success($0) }
-            .debug("xxx1")
             .catchError {
                 guard case MoyaError.statusCode(let res) = $0,
                     let errorData = try? res.map(PunkErrorData.self) else {
@@ -32,7 +30,7 @@ class PunkServiceImpl: PunkService {
             }
     }
     
-    func getSingleBeer(id: String) -> Single<BeerResult<Beer>> {
+    func getSingleBeer(id: String) -> Single<BeerResult<[Beer]>> {
         return punkRepo
             .getSingleBeer(id: id)
             .map { .success($0) }
@@ -45,7 +43,7 @@ class PunkServiceImpl: PunkService {
             }
     }
     
-    func getRandomBeer() -> Single<BeerResult<Beer>> {
+    func getRandomBeer() -> Single<BeerResult<[Beer]>> {
         return punkRepo
             .getRandomBeer()
             .map { .success($0) }

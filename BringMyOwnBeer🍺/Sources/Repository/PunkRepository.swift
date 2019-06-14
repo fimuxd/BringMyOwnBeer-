@@ -11,6 +11,6 @@ import RxSwift
 
 protocol PunkRepository {
     func getBeers(components: BeerFilterComponents, page: Int?, perPage: Int?) -> Single<[Beer]>
-    func getSingleBeer(id: String) -> Single<Beer>
-    func getRandomBeer() -> Single<Beer>
+    func getSingleBeer(id: String) -> Single<[Beer]>
+    func getRandomBeer() -> Single<[Beer]>
 }

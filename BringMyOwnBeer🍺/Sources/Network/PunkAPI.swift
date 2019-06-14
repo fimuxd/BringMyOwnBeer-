@@ -42,25 +42,26 @@ extension PunkAPI: TargetType {
     var parameters: [String: Any]? {
         switch self {
         case let .getBeers(components, page, perPage):
-            guard let abvGT = components.abvGreaterThanSuppliedNumber,
-                let abvLT = components.abvLessThanSUppliedNumber else {
+            guard let page = page,
+                let perPage = perPage else {
                 return nil
             }
+            
             return [
-                "abv_gt": abvGT,
-                "abv_lt": abvLT,
-                "ibu_gt": components.ibuGreaterThanSuppliedNumber,
-                "ibu_lt": components.ibuLessThanSUppliedNumber,
-                "ebc_gt": components.ebcGreaterThanSuppliedNumber,
-                "ebc_lt": components.ebcLessThanSUppliedNumber,
-                "beer_name": components.name,
-                "yeast": components.yeast,
-                "brewed_before": components.brewedBefore?.toFormat("MM-yyyy"),
-                "brewed_after": components.brewedAfter?.toFormat("MM-yyyy"),
-                "hops": components.hops,
-                "malt": components.malt,
-                "food": components.food,
-                "ids": components.ids,
+//                "abv_gt": abvGT,
+//                "abv_lt": abvLT,
+//                "ibu_gt": components.ibuGreaterThanSuppliedNumber,
+//                "ibu_lt": components.ibuLessThanSUppliedNumber,
+//                "ebc_gt": components.ebcGreaterThanSuppliedNumber,
+//                "ebc_lt": components.ebcLessThanSUppliedNumber,
+//                "beer_name": components.name,
+//                "yeast": components.yeast,
+//                "brewed_before": components.brewedBefore?.toFormat("MM-yyyy"),
+//                "brewed_after": components.brewedAfter?.toFormat("MM-yyyy"),
+//                "hops": components.hops,
+//                "malt": components.malt,
+//                "food": components.food,
+//                "ids": components.ids,
                 "page": page,
                 "per_page": perPage
             ]
@@ -78,14 +79,6 @@ extension PunkAPI: TargetType {
     }
     
     var task: Task {
-//        let parameterEncoding: Moya.ParameterEncoding
-//        switch self.method {
-//        case .get:
-//            parameterEncoding = URLEncoding.default
-//        default:
-//            parameterEncoding = JSONEncoding.default
-//        }
-//
         return .requestParameters(
             parameters: self.parameters ?? [:],
             encoding: URLEncoding.default

@@ -2,7 +2,7 @@ import UIKit
 
 open class ToastWindow: UIWindow {
 
-    public static let shared = ToastWindow(frame: UIScreen.main.bounds)
+  open static let shared = ToastWindow(frame: UIScreen.main.bounds)
 
   /// Will not return `rootViewController` while this value is `true`. Or the rotation will be fucked in iOS 9.
   var isStatusBarOrientationChanging = false
@@ -43,7 +43,7 @@ open class ToastWindow: UIWindow {
   public override init(frame: CGRect) {
     super.init(frame: frame)
     self.isUserInteractionEnabled = false
-    self.windowLevel = UIWindow.Level(rawValue: CGFloat.greatestFiniteMagnitude)
+    self.windowLevel = CGFloat.greatestFiniteMagnitude
     self.backgroundColor = .clear
     self.isHidden = false
     self.handleRotate(UIApplication.shared.statusBarOrientation)
@@ -51,25 +51,25 @@ open class ToastWindow: UIWindow {
     NotificationCenter.default.addObserver(
       self,
       selector: #selector(self.bringWindowToTop),
-      name: UIWindow.didBecomeVisibleNotification,
+      name: .UIWindowDidBecomeVisible,
       object: nil
     )
     NotificationCenter.default.addObserver(
       self,
       selector: #selector(self.statusBarOrientationWillChange),
-      name: UIApplication.willChangeStatusBarOrientationNotification,
+      name: .UIApplicationWillChangeStatusBarOrientation,
       object: nil
     )
     NotificationCenter.default.addObserver(
       self,
       selector: #selector(self.statusBarOrientationDidChange),
-      name: UIApplication.didChangeStatusBarOrientationNotification,
+      name: .UIApplicationDidChangeStatusBarOrientation,
       object: nil
     )
     NotificationCenter.default.addObserver(
       self,
       selector: #selector(self.applicationDidBecomeActive),
-      name: UIApplication.didBecomeActiveNotification,
+      name: .UIApplicationDidBecomeActive,
       object: nil
     )
   }

@@ -14,7 +14,7 @@ open class ToastCenter {
     return self.queue.operations.first { !$0.isCancelled && !$0.isFinished } as? Toast
   }
 
-    public static let `default` = ToastCenter()
+  open static let `default` = ToastCenter()
 
 
   // MARK: Initializing
@@ -23,7 +23,7 @@ open class ToastCenter {
     NotificationCenter.default.addObserver(
       self,
       selector: #selector(self.deviceOrientationDidChange),
-      name: UIDevice.orientationDidChangeNotification,
+      name: .UIDeviceOrientationDidChange,
       object: nil
     )
   }

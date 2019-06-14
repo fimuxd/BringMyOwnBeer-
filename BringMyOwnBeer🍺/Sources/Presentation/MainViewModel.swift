@@ -12,14 +12,8 @@ import RxCocoa
 
 struct MainViewModel: MainViewBindable {
     let beerListViewModel = BeerListViewModel()
-    
-    var currentTab = PublishSubject<Tab>()
-//    let tabChanged =  PublishSubject<Tab?> { get }
-    let presentTab: Signal<Tab>
+    let singleBeerViewModel = SingleBeerViewModel()
     
     init() {
-        self.presentTab = currentTab
-            .startWith(.beerList)
-            .asSignal(onErrorSignalWith: .empty())
     }
 }

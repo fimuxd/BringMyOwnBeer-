@@ -9,19 +9,23 @@
 import UIKit
 import RxSwift
 import RxCocoa
-import Then
+import RxAppState
 import SnapKit
+import Toaster
 
 protocol BeerListViewBindable {
-    var testButtonTapped: PublishRelay<Void> { get }
-    var result: Signal<[Beer]?> { get }
+    var viewWillAppear: PublishSubject<Void> { get }
+    var itemSelected: PublishRelay<Int> { get }
+    var willDisplayCell: PublishRelay<IndexPath> { get }
+    var cellData: Driver<[BeerListCell.Data]> { get }
+    var reloadList: Signal<Void> { get }
+    var errorMessage: Signal<String> { get }
 }
 
 class BeerListViewController: UIViewController {
     var disposeBag = DisposeBag()
     
-    let testButton = UIButton()
-    
+    let tableView = UITableView()
     
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -40,30 +44,64 @@ class BeerListViewController: UIViewController {
     func bind(_ viewModel: BeerListViewBindable) {
         self.disposeBag = DisposeBag()
         
-        testButton.rx.tap
-            .bind(to: viewModel.testButtonTapped)
+        self.rx.viewWillAppear
+            .map { _ in Void() }
+            .bind(to: viewModel.viewWillAppear)
             .disposed(by: disposeBag)
         
-        viewModel.result
-            .emit(onNext: { list in
-                print("xxxResult: \(list)")
+        tableView.rx.itemSelected
+            .map { $0.row }
+            .bind(to: viewModel.itemSelected)
+            .disposed(by: disposeBag)
+        
+        tableView.rx.willDisplayCell
+            .map { $0.indexPath }
+            .bind(to: viewModel.willDisplayCell)
+            .disposed(by: disposeBag)
+        
+        viewModel.cellData
+            .drive(tableView.rx.items) { tv, row, data in
+                let index = IndexPath(row: row, section: 0)
+                let cell = tv.dequeueReusableCell(withIdentifier: String(describing: BeerListCell.self), for: index) as! BeerListCell
+                cell.setData(data: data)
+                return cell
+            }
+            .disposed(by: disposeBag)
+        
+        viewModel.reloadList
+            .emit(onNext: { [weak self] _ in
+                self?.tableView.reloadData()
+                })
+            .disposed(by: disposeBag)
+        
+        viewModel.errorMessage
+            .emit(onNext: { msg in
+                Toast(text: msg, delay: 0, duration: 1).show()
             })
             .disposed(by: disposeBag)
     }
     
     func attribute() {
+        title = "맥주리스트"
         view.backgroundColor = .white
-        testButton.do {
-            $0.setTitle("테스트", for: .normal)
-            $0.setTitleColor(.black, for: .normal)
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
+        tableView.do {
+            $0.backgroundView = UIView()
+            $0.backgroundView?.isHidden = true
+            $0.backgroundColor = .white
+            $0.register(BeerListCell.self, forCellReuseIdentifier: String(describing: BeerListCell.self))
+            $0.separatorStyle = .singleLine
+            $0.rowHeight = UITableViewAutomaticDimension
+            $0.estimatedRowHeight = 160
         }
     }
     
     func layout() {
-        view.addSubview(testButton)
-        testButton.snp.makeConstraints {
-            $0.center.equalToSuperview()
+        view.addSubview(tableView)
+        
+        tableView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
         }
     }
 }
-

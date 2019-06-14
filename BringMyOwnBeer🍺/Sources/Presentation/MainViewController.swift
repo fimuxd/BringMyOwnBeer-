@@ -14,10 +14,7 @@ import Then
 protocol MainViewBindable {
     typealias Tab = MainViewController.Tab
     var beerListViewModel: BeerListViewModel { get }
-    
-    var currentTab: PublishSubject<Tab> { get }
-//    var tabChanged: PublishSubject<Tab?> { get }
-    var presentTab: Signal<Tab> { get }
+    var singleBeerViewModel: SingleBeerViewModel { get }
 }
 
 class MainViewController: UITabBarController {
@@ -25,15 +22,23 @@ class MainViewController: UITabBarController {
 
     enum Tab: Int {
         case beerList
+        case singleBeer
+//        case randomBeer
     }
     
     let beerListViewController = BeerListViewController()
+    let singleBeerViewController = SingleBeerViewController()
     
     let tabBarItems: [Tab: UITabBarItem] = [
         .beerList: UITabBarItem(
             title: "맥주리스트",
             image: #imageLiteral(resourceName: "Multiple Beers"),
             selectedImage: #imageLiteral(resourceName: "Multiple Beers")
+        ),
+        .singleBeer: UITabBarItem(
+            title: "ID 검색",
+            image: #imageLiteral(resourceName: "Single Beer"),
+            selectedImage: #imageLiteral(resourceName: "Single Beer")
         )
     ]
     
@@ -54,25 +59,17 @@ class MainViewController: UITabBarController {
         self.disposeBag = DisposeBag()
         
         beerListViewController.bind(viewModel.beerListViewModel)
-        
-        viewModel.presentTab
-            .emit(onNext: { [weak self] tab in
-                guard let self = self,
-                    let item = self.tabBarItems[tab],
-                    self.tabBar.selectedItem != item
-                else {
-                    return
-                }
-                self.selectedIndex = tab.rawValue
-            })
-            .disposed(by: disposeBag)
-        
+        singleBeerViewController.bind(viewModel.singleBeerViewModel)
     }
     
     func attribute() {
         self.do {
             beerListViewController.tabBarItem = tabBarItems[.beerList]
-            $0.viewControllers = [UINavigationController(rootViewController: beerListViewController)]
+            singleBeerViewController.tabBarItem = tabBarItems[.singleBeer]
+            $0.viewControllers = [
+                UINavigationController(rootViewController: beerListViewController),
+                UINavigationController(rootViewController: singleBeerViewController)
+            ]
         }
         
         view.do {

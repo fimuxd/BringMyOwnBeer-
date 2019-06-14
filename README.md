@@ -7,5 +7,5 @@
 ## Screenshots
 | 내용 | 스크린샷 |
 |:---:|:---:|
-| 리스트 | <img src = "https://files.slack.com/files-pri/T07M35JU8-FKM2FLR54/simulator_screen_shot_-_iphone_x___-_2019-06-14_at_10.51.13.png" width = 400> |
+| 리스트 | <img src = "https://github.com/fimuxd/BringMyOwnBeer-/blob/master/Simulator%20Screen%20Shot%20-%20iPhone%20Xʀ%20-%202019-06-14%20at%2010.51.13.png?raw=true" width = 400> |
 | 검색 결과 | <img src = "https://files.slack.com/files-pri/T07M35JU8-FKM2FLR54/simulator_screen_shot_-_iphone_x___-_2019-06-14_at_10.51.13.png" width = 400> |

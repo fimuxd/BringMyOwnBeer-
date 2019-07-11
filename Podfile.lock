@@ -1,20 +1,22 @@
 PODS:
   - Alamofire (4.8.2)
   - Differentiator (3.1.0)
-  - EFCountingLabel (5.0.0)
   - Kingfisher (4.10.1)
-  - lottie-ios (3.0.4)
   - Moya/Core (12.0.1):
     - Alamofire (~> 4.1)
     - Result (~> 4.0)
   - Moya/RxSwift (12.0.1):
     - Moya/Core
     - RxSwift (~> 4.0)
+  - Nimble (8.0.2)
+  - Quick (1.3.4)
   - Result (4.1.0)
   - RxAppState (1.5.0):
     - RxCocoa (~> 4.4)
     - RxSwift (~> 4.4)
   - RxAtomic (4.4.2)
+  - RxBlocking (4.5.0):
+    - RxSwift (>= 4.4.2, ~> 4.4)
   - RxCocoa (4.4.2):
     - RxSwift (>= 4.4.2, ~> 4.4)
   - RxDataSources (3.1.0):
@@ -29,28 +31,26 @@ PODS:
     - RxSwift (~> 4.0)
   - RxSwift (4.4.2):
     - RxAtomic (>= 4.4.2, ~> 4.4)
-  - RxWebKit (0.3.7):
-    - RxCocoa (~> 4.0)
-    - RxSwift (~> 4.0)
+  - RxTest (4.5.0):
+    - RxSwift (>= 4.4.2, ~> 4.4)
   - SnapKit (4.2.0)
-  - SwiftDate (6.0.2)
   - Then (2.4.0)
   - Toaster (2.1.1)
 
 DEPENDENCIES:
-  - EFCountingLabel
   - Kingfisher (~> 4.10.1)
-  - lottie-ios (~> 3.0.3)
   - Moya/RxSwift (~> 12.0.1)
+  - Nimble (~> 8.0.0)
+  - Quick (~> 1.3.1)
   - RxAppState
+  - RxBlocking (~> 4.0)
   - RxCocoa (~> 4.4.0)
   - RxDataSources (~> 3.1.0)
   - RxKeyboard (~> 0.9.0)
   - RxOptional (~> 3.6.2)
   - RxSwift (~> 4.4.0)
-  - RxWebKit (~> 0.3.7)
+  - RxTest (~> 4.0)
   - SnapKit (~> 4.2.0)
-  - SwiftDate (~> 6.0.1)
   - Then (~> 2.4.0)
   - Toaster (~> 2.1.0)
 
@@ -58,45 +58,45 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Differentiator
-    - EFCountingLabel
     - Kingfisher
-    - lottie-ios
     - Moya
+    - Nimble
+    - Quick
     - Result
     - RxAppState
     - RxAtomic
+    - RxBlocking
     - RxCocoa
     - RxDataSources
     - RxKeyboard
     - RxOptional
     - RxSwift
-    - RxWebKit
+    - RxTest
     - SnapKit
-    - SwiftDate
     - Then
     - Toaster
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
-  EFCountingLabel: c25faa62a975f8ef9b2cb0928e8675520e8e2739
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
-  lottie-ios: 55a2de40418f8de2b155efaba4d4d1a025a5c570
   Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
+  Nimble: 622629381bda1dd5678162f21f1368cec7cbba60
+  Quick: f4f7f063c524394c73ed93ac70983c609805d481
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   RxAppState: 46cae19e582daf7283a8f9ef553e7c049e1565b4
   RxAtomic: d00e97c10db88c6f08540e0bf2752fc5a2404167
+  RxBlocking: 79413e4d916f44bb3e113c5b2cc059e36fe58910
   RxCocoa: 477990dc3b4c3ff55fb0ac77e1cc06244e0aaec8
   RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
   RxKeyboard: 4f782303f499f41577b41c96c6a9a5d7acd51a47
   RxOptional: 80426a0ddbd092573e4c482d8cc13302078c4d5e
   RxSwift: 74c29b693c8e42b0f64400e8b06564575742d649
-  RxWebKit: e39e220919e5e24546c837f5f60689036a1e5920
+  RxTest: 3ccb66bfbace0bf7df1c43a7c75d046f8ce60372
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  SwiftDate: bbed9b23bfec599bd62b9a305afc554f7bd0eb6f
   Then: 71866660c7af35a7343831f7668e7cd2b62ee0f2
   Toaster: a6c9532de1ded8105e77376f7dffeb2e12b46dbb
 
-PODFILE CHECKSUM: bde6535689db512e8d2c87596ded98303bd641a5
+PODFILE CHECKSUM: b7cc24aa49c1bb049513a3dd05d4fb409513cfef
 
 COCOAPODS: 1.6.1

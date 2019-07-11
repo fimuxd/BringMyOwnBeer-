@@ -8,11 +8,10 @@
 
 import RxSwift
 import Moya
-import SwiftDate
 
 enum PunkAPI {
     case getBeers(components: BeerFilterComponents, page: Int?, perPage: Int?)
-    case getSingleBeer(id: String)
+    case getBeer(id: String)
     case getRandomBeer
 }
 
@@ -32,7 +31,7 @@ extension PunkAPI: TargetType {
         switch self {
         case .getBeers:
             return "/v2/beers"
-        case let .getSingleBeer(id):
+        case let .getBeer(id):
             return "/v2/beers/\(id)"
         case .getRandomBeer:
             return "/v2/beers/random"

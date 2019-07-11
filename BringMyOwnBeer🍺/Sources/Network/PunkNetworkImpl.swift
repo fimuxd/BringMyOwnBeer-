@@ -1,5 +1,5 @@
 //
-//  PunkServiceImpl.swift
+//  PunkNetworkImpl.swift
 //  BringMyOwnBeer🍺
 //
 //  Created by Boyoung Park on 13/06/2019.
@@ -10,16 +10,17 @@ import Foundation
 import RxSwift
 import Moya
 
-class PunkServiceImpl: PunkService {
-    let punkRepo: PunkRepository
-    
-    init(punkRepo: PunkRepository) {
-        self.punkRepo = punkRepo
-    }
+class PunkNetworkImpl: PunkNetwork {
+    let provider = MoyaProvider<PunkAPI>()
     
     func getBeers(components: BeerFilterComponents, page: Int?, perPage: Int?) -> Single<BeerResult<[Beer]>> {
-        return punkRepo
-            .getBeers(components: components, page: page, perPage: perPage)
+        return provider.rx.request(
+                .getBeers(components: components, page: page, perPage: perPage)
+            )
+            .filterSuccessfulStatusCodes()
+            .map { res in
+                try JSONDecoder().decode([Beer].self, from: res.data)
+            }
             .map { .success($0) }
             .catchError {
                 guard case MoyaError.statusCode(let res) = $0,
@@ -30,10 +31,16 @@ class PunkServiceImpl: PunkService {
             }
     }
     
-    func getSingleBeer(id: String) -> Single<BeerResult<[Beer]>> {
-        return punkRepo
-            .getSingleBeer(id: id)
-            .map { .success($0) }
+    func getBeer(id: String) -> Single<BeerResult<Beer>> {
+        return provider.rx.request(.getBeer(id: id))
+            .filterSuccessfulStatusCodes()
+            .map { try JSONDecoder().decode([Beer].self, from: $0.data) }
+            .map { beers in
+                guard let beer = beers.first else {
+                    return .failure(.defaultError)
+                }
+                return .success(beer)
+            }
             .catchError {
                 guard case MoyaError.statusCode(let res) = $0,
                     let errorData = try? res.map(PunkErrorData.self) else {
@@ -43,10 +50,16 @@ class PunkServiceImpl: PunkService {
             }
     }
     
-    func getRandomBeer() -> Single<BeerResult<[Beer]>> {
-        return punkRepo
-            .getRandomBeer()
-            .map { .success($0) }
+    func getRandomBeer() -> Single<BeerResult<Beer>> {
+        return provider.rx.request(.getRandomBeer)
+            .filterSuccessfulStatusCodes()
+            .map { try JSONDecoder().decode([Beer].self, from: $0.data) }
+            .map { beers in
+                guard let beer = beers.first else {
+                    return .failure(.defaultError)
+                }
+                return .success(beer)
+            }
             .catchError {
                 guard case MoyaError.statusCode(let res) = $0,
                     let errorData = try? res.map(PunkErrorData.self) else {

@@ -1,5 +1,5 @@
 //
-//  PunkService.swift
+//  PunkNetwork.swift
 //  BringMyOwnBeer🍺
 //
 //  Created by Boyoung Park on 13/06/2019.
@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-enum PunkServiceError: Error {
+enum PunkNetworkError: Error {
     case error(String)
     case defaultError
     
@@ -23,10 +23,10 @@ enum PunkServiceError: Error {
     }
 }
 
-protocol PunkService {
-    typealias BeerResult<T> = Result<T, PunkServiceError>
+protocol PunkNetwork {
+    typealias BeerResult<T> = Result<T, PunkNetworkError>
     
     func getBeers(components: BeerFilterComponents, page: Int?, perPage: Int?) -> Single<BeerResult<[Beer]>>
-    func getSingleBeer(id: String) -> Single<BeerResult<[Beer]>>
-    func getRandomBeer() -> Single<BeerResult<[Beer]>>
+    func getBeer(id: String) -> Single<BeerResult<Beer>>
+    func getRandomBeer() -> Single<BeerResult<Beer>>
 }

@@ -17,6 +17,8 @@
 		6A6DDBA722B324570084DEBD /* RandomBeerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DDBA622B324570084DEBD /* RandomBeerViewModel.swift */; };
 		6A6DDBA922B3245E0084DEBD /* RandomBeerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DDBA822B3245E0084DEBD /* RandomBeerModel.swift */; };
 		6A6DDBAC22B328FA0084DEBD /* BeerListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DDBAB22B328FA0084DEBD /* BeerListCell.swift */; };
+		6AC29F2F22D6F83A00B416F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC29F2E22D6F83A00B416F0 /* ViewController.swift */; };
+		6AC29F3122D6FB8300B416F0 /* Reactive+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC29F3022D6FB8300B416F0 /* Reactive+UIViewController.swift */; };
 		7DAC7F1222B20E55004D032B /* PunkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAC7F1122B20E55004D032B /* PunkAPI.swift */; };
 		7DAC7F1422B20EEA004D032B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAC7F1322B20EEA004D032B /* Constants.swift */; };
 		7DAC7F1722B21060004D032B /* BeerFilterComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAC7F1622B21060004D032B /* BeerFilterComponents.swift */; };
@@ -71,6 +73,8 @@
 		6A6DDBA622B324570084DEBD /* RandomBeerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomBeerViewModel.swift; sourceTree = "<group>"; };
 		6A6DDBA822B3245E0084DEBD /* RandomBeerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomBeerModel.swift; sourceTree = "<group>"; };
 		6A6DDBAB22B328FA0084DEBD /* BeerListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListCell.swift; sourceTree = "<group>"; };
+		6AC29F2E22D6F83A00B416F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6AC29F3022D6FB8300B416F0 /* Reactive+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reactive+UIViewController.swift"; sourceTree = "<group>"; };
 		7DAC7F1122B20E55004D032B /* PunkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunkAPI.swift; sourceTree = "<group>"; };
 		7DAC7F1322B20EEA004D032B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7DAC7F1622B21060004D032B /* BeerFilterComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerFilterComponents.swift; sourceTree = "<group>"; };
@@ -180,6 +184,15 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		6AC29F2D22D6F82500B416F0 /* Universal Component */ = {
+			isa = PBXGroup;
+			children = (
+				6AC29F2E22D6F83A00B416F0 /* ViewController.swift */,
+				6AC29F3022D6FB8300B416F0 /* Reactive+UIViewController.swift */,
+			);
+			path = "Universal Component";
+			sourceTree = "<group>";
+		};
 		7DAC7F0A22B20DA4004D032B /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +253,7 @@
 				6A6DDB9B22B323EC0084DEBD /* Beer List */,
 				6A6DDB9C22B324000084DEBD /* Single Beer */,
 				6A6DDB9D22B3241A0084DEBD /* Random Beer */,
+				6AC29F2D22D6F82500B416F0 /* Universal Component */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -587,10 +601,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AC29F2F22D6F83A00B416F0 /* ViewController.swift in Sources */,
 				7DE0575222B20BFE002002D7 /* BeerListViewController.swift in Sources */,
 				7DAC7F2F22B225F1004D032B /* PunkErrorData.swift in Sources */,
 				7DAC7F1F22B21932004D032B /* Ingredients.swift in Sources */,
 				7DAC7F1922B2145C004D032B /* PunkRepository.swift in Sources */,
+				6AC29F3122D6FB8300B416F0 /* Reactive+UIViewController.swift in Sources */,
 				7DAC7F2D22B223DC004D032B /* PunkService.swift in Sources */,
 				7DAC7F2622B221DA004D032B /* PunkRepositoryImpl.swift in Sources */,
 				7DAC7F1D22B21908004D032B /* BeerMethod.swift in Sources */,

@@ -10,8 +10,9 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+typealias BeerData = BeerListCell.Data
+
 protocol RandomBeerViewBindable {
-    typealias BeerData = BeerListCell.Data
     var randomButtonTapped: PublishRelay<Void> { get }
     var selectedBeerData: Signal<BeerData> { get }
     var errorMessage: Signal<String> { get }
@@ -107,6 +108,7 @@ class RandomBeerViewController: ViewController<RandomBeerViewBindable> {
             $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-60)
             $0.centerX.equalToSuperview()
             $0.left.right.equalToSuperview().inset(20)
+            $0.height.equalTo(56)
         }
     }
 }

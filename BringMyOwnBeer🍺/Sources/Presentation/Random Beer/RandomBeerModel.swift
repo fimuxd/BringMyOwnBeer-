@@ -9,23 +9,24 @@
 import RxSwift
 
 struct RandomBeerModel {
-    let punkService: PunkService
+    let punkNetwork: PunkNetwork
     
     init(
-        punkService: PunkService = PunkServiceImpl(punkRepo: PunkRepositoryImpl())
+        punkNetwork: PunkNetwork = PunkNetworkImpl()
     ) {
-        self.punkService = punkService
+        self.punkNetwork = punkNetwork
     }
     
-    func getRandomBeer() -> Single<Result<[Beer], PunkServiceError>> {
-        return punkService.getRandomBeer()
+    func getRandomBeer() -> Single<Result<Beer, PunkNetworkError>> {
+        return punkNetwork.getRandomBeer()
     }
     
-    func parseData(value: [Beer]) -> BeerListCell.Data? {
-        guard let value = value.first else {
-            return nil
-        }
-        
-        return (id: value.id ?? 0, name: value.name ?? "", description: value.description ?? "", imageURL: value.imageURL ?? "")
+    func parseData(value: Beer) -> BeerListCell.Data? {
+        return (
+            id: value.id ?? 0,
+            name: value.name ?? "",
+            description: value.description ?? "",
+            imageURL: value.imageURL ?? ""
+        )
     }
 }

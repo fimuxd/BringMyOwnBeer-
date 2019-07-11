@@ -23,29 +23,17 @@ struct RandomBeerViewModel: RandomBeerViewBindable {
             .share()
         
         let beerValue = beerResult
-            .map { result -> [Beer]? in
-                guard case .success(let value) = result else {
-                    return nil
-                }
-                return value
-            }
-            .filterNil()
+            .filterNilValue { $0.value }
         
         let beerError = beerResult
-            .map { result -> String? in
-                guard case .failure(let error) = result else {
-                    return nil
-                }
-                return error.message
-            }
-            .filterNil()
+            .filterNilValue { $0.error?.message }
         
         self.selectedBeerData = beerValue
-            .map(model.parseData)
-            .filterNil()
+            .filterNilValue(model.parseData)
             .asSignal(onErrorSignalWith: .empty())
         
         self.errorMessage = beerError
             .asSignal(onErrorJustReturn: "잠시 후 다시 시도해 주세요")
     }
 }
+

@@ -12,19 +12,15 @@ target 'BringMyOwnBeer🍺' do
   pod 'RxOptional', '~> 3.6.2'
   pod 'Moya/RxSwift', '~> 12.0.1'
   pod 'RxKeyboard', '~> 0.9.0'
-  pod 'RxWebKit', '~> 0.3.7'
   pod 'RxAppState'
   pod 'RxDataSources', '~> 3.1.0'
 
   # Image + Animation + UI
   pod 'Kingfisher', '~> 4.10.1'
   pod 'Toaster', '~> 2.1.0'
-  pod 'EFCountingLabel'
-  pod 'lottie-ios', '~> 3.0.3'
   pod 'SnapKit', '~> 4.2.0'
 
   # Other Swift Utilities
-  pod 'SwiftDate', '~> 6.0.1'
   pod 'Then', '~> 2.4.0'
 
 def testing_pods
@@ -37,11 +33,13 @@ end
   target 'BringMyOwnBeer🍺Tests' do
     inherit! :search_paths
     # Pods for testing
+    testing_pods
   end
 
   target 'BringMyOwnBeer🍺UITests' do
     inherit! :search_paths
     # Pods for testing
+    testing_pods
   end
 
 end

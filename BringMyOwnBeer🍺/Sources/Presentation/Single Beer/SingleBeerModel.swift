@@ -10,21 +10,17 @@ import Foundation
 import RxSwift
 
 struct SingleBeerModel {
-    let punkService: PunkService
+    let punkNetwork: PunkNetwork
     
-    init(punkService: PunkService = PunkServiceImpl(punkRepo: PunkRepositoryImpl())) {
-        self.punkService = punkService
+    init(punkNetwork: PunkNetwork = PunkNetworkImpl()) {
+        self.punkNetwork = punkNetwork
     }
     
-    func getSingleBeer(id: String) -> Single<Result<[Beer], PunkServiceError>> {
-        return punkService.getSingleBeer(id: id)
+    func getSingleBeer(id: String) -> Single<Result<Beer, PunkNetworkError>> {
+        return punkNetwork.getBeer(id: id)
     }
     
-    func parseData(value: [Beer]) -> BeerListCell.Data? {
-        guard let value = value.first else {
-            return nil
-        }
-        
+    func parseData(value: Beer) -> BeerListCell.Data? {
         return (id: value.id ?? 0, name: value.name ?? "", description: value.description ?? "", imageURL: value.imageURL ?? "")
     }
 }

@@ -6,4 +6,27 @@
 //  Copyright © 2019 Boyoung Park. All rights reserved.
 //
 
-import Foundation
+import RxSwift
+
+struct RandomBeerModel {
+    let punkNetwork: PunkNetwork
+    
+    init(
+        punkNetwork: PunkNetwork = PunkNetworkImpl()
+    ) {
+        self.punkNetwork = punkNetwork
+    }
+    
+    func getRandomBeer() -> Single<Result<Beer, PunkNetworkError>> {
+        return punkNetwork.getRandomBeer()
+    }
+    
+    func parseData(value: Beer) -> BeerListCell.Data? {
+        return (
+            id: value.id ?? 0,
+            name: value.name ?? "",
+            description: value.description ?? "",
+            imageURL: value.imageURL ?? ""
+        )
+    }
+}

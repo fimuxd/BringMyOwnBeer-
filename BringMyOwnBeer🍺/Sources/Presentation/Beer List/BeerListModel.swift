@@ -10,14 +10,14 @@ import Foundation
 import RxSwift
 
 struct BeerListModel {
-    let punkService: PunkService
+    let punkNetwork: PunkNetwork
     
-    init(punkService: PunkService = PunkServiceImpl(punkRepo: PunkRepositoryImpl())) {
-        self.punkService = punkService
+    init(punkNetwork: PunkNetwork = PunkNetworkImpl()) {
+        self.punkNetwork = punkNetwork
     }
     
-    func getBeerList() -> Single<Result<[Beer], PunkServiceError>> {
-        return punkService.getBeers(components: BeerFilterComponents(), page: nil, perPage: nil)
+    func getBeerList() -> Single<Result<[Beer], PunkNetworkError>> {
+        return punkNetwork.getBeers(components: BeerFilterComponents(), page: nil, perPage: nil)
     }
     
     func parseData(value: [Beer]) -> [BeerListCell.Data] {
@@ -26,9 +26,9 @@ struct BeerListModel {
         }
     }
     
-    func fetchMoreData(from: Int) -> Single<Result<[Beer], PunkServiceError>> {
+    func fetchMoreData(from: Int) -> Single<Result<[Beer], PunkNetworkError>> {
         // 총 325개
         let page = (from + 1)/25 + 1
-        return punkService.getBeers(components: BeerFilterComponents(), page: page, perPage: 25)
+        return punkNetwork.getBeers(components: BeerFilterComponents(), page: page, perPage: 25)
     }
 }

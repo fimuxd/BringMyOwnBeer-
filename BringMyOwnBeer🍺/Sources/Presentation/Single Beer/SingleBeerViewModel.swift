@@ -22,7 +22,7 @@ struct SingleBeerViewModel: SingleBeerViewBindable {
             .share()
         
         let beerValue = beerResult
-            .map { result -> [Beer]? in
+            .map { result -> Beer? in
                 guard case .success(let value) = result else {
                     return nil
                 }

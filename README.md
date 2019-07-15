@@ -22,7 +22,7 @@
 
 | 리스트 | 검색 | 랜덤 |
 |:---:|:---:|:---:|
-<img src = "https://github.com/fimuxd/BringMyOwnBeer-/blob/master/Simulator%20Screen%20Shot%20-%20iPhone%20Xʀ%20-%202019-06-14%20at%2010.51.13.png?raw=true" width = 400> | <img src = "https://github.com/fimuxd/BringMyOwnBeer-/blob/master/Simulator%20Screen%20Shot%20-%20iPhone%20Xʀ%20-%202019-06-14%20at%2016.37.11.png?raw=true" width = 400> | |
+<img src = "https://github.com/fimuxd/BringMyOwnBeer-/blob/develop/스크린샷%202019-07-15%2012.11.32.png?raw=true" width = 400> | <img src = "https://github.com/fimuxd/BringMyOwnBeer-/blob/develop/스크린샷%202019-07-15%2012.11.57.png?raw=true" width = 400> | <img src = "https://github.com/fimuxd/BringMyOwnBeer-/blob/develop/스크린샷%202019-07-15%2012.12.09.png?raw=true" width = 400> |
 
 - Naver Tech Concert 에서 예로 든 것은 `RandomViewController` 와 그 model들
 

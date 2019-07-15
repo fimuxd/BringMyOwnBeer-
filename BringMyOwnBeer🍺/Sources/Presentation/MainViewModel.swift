@@ -11,9 +11,13 @@ import RxSwift
 import RxCocoa
 
 struct MainViewModel: MainViewBindable {
-    let beerListViewModel = BeerListViewModel()
-    let singleBeerViewModel = SingleBeerViewModel()
+    let beerListViewModel: BeerListViewBindable
+    let singleBeerViewModel: SingleBeerViewBindable
+    let randomBeerViewModel: RandomBeerViewBindable
     
     init() {
+        self.beerListViewModel = BeerListViewModel()
+        self.singleBeerViewModel = SingleBeerViewModel()
+        self.randomBeerViewModel = RandomBeerViewModel()
     }
 }

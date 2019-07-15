@@ -155,7 +155,6 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/EFCountingLabel/EFCountingLabel.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Moya/Moya.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Result/Result.framework"
@@ -166,17 +165,13 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/RxKeyboard/RxKeyboard.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/RxWebKit/RxWebKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Then/Then.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/EFCountingLabel/EFCountingLabel.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Moya/Moya.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Result/Result.framework"
@@ -187,12 +182,9 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/RxKeyboard/RxKeyboard.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/RxWebKit/RxWebKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Then/Then.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

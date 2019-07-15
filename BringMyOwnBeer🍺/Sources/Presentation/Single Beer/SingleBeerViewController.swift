@@ -135,5 +135,3 @@ extension Reactive where Base: SingleBeerViewController {
         }
     }
 }
-
-

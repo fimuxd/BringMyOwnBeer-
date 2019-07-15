@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import BringMyOwnBeer__
+@testable import BringMyOwnBeer_
 
 class BringMyOwnBeer__Tests: XCTestCase {
 

@@ -13,8 +13,9 @@ import Then
 
 protocol MainViewBindable {
     typealias Tab = MainViewController.Tab
-    var beerListViewModel: BeerListViewModel { get }
-    var singleBeerViewModel: SingleBeerViewModel { get }
+    var beerListViewModel: BeerListViewBindable { get }
+    var singleBeerViewModel: SingleBeerViewBindable { get }
+    var randomBeerViewModel: RandomBeerViewBindable { get }
 }
 
 class MainViewController: UITabBarController {
@@ -23,11 +24,12 @@ class MainViewController: UITabBarController {
     enum Tab: Int {
         case beerList
         case singleBeer
-//        case randomBeer
+        case randomBeer
     }
     
     let beerListViewController = BeerListViewController()
     let singleBeerViewController = SingleBeerViewController()
+    let randomBeerViewController = RandomBeerViewController()
     
     let tabBarItems: [Tab: UITabBarItem] = [
         .beerList: UITabBarItem(
@@ -39,6 +41,11 @@ class MainViewController: UITabBarController {
             title: "ID 검색",
             image: #imageLiteral(resourceName: "Single Beer"),
             selectedImage: #imageLiteral(resourceName: "Single Beer")
+        ),
+        .randomBeer: UITabBarItem(
+            title: "아무거나 검색",
+            image: #imageLiteral(resourceName: "Single Beer with bubble"),
+            selectedImage: #imageLiteral(resourceName: "Single Beer with bubble")
         )
     ]
     
@@ -60,15 +67,18 @@ class MainViewController: UITabBarController {
         
         beerListViewController.bind(viewModel.beerListViewModel)
         singleBeerViewController.bind(viewModel.singleBeerViewModel)
+        randomBeerViewController.bind(viewModel.randomBeerViewModel)
     }
     
     func attribute() {
         self.do {
             beerListViewController.tabBarItem = tabBarItems[.beerList]
             singleBeerViewController.tabBarItem = tabBarItems[.singleBeer]
+            randomBeerViewController.tabBarItem = tabBarItems[.randomBeer]
             $0.viewControllers = [
                 UINavigationController(rootViewController: beerListViewController),
-                UINavigationController(rootViewController: singleBeerViewController)
+                UINavigationController(rootViewController: singleBeerViewController),
+                UINavigationController(rootViewController: randomBeerViewController)
             ]
         }
         

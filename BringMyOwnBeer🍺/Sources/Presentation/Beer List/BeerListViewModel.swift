@@ -118,6 +118,6 @@ struct BeerListViewModel: BeerListViewBindable {
                 beerListError,
                 fetchedError
             )
-            .asSignal(onErrorJustReturn: PunkServiceError.defaultError.message ?? "")
+            .asSignal(onErrorJustReturn: PunkNetworkError.defaultError.message ?? "")
     }
 }

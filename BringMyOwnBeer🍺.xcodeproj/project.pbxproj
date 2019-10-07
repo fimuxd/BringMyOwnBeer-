@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,7 @@
 		6A6DDBA722B324570084DEBD /* RandomBeerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DDBA622B324570084DEBD /* RandomBeerViewModel.swift */; };
 		6A6DDBA922B3245E0084DEBD /* RandomBeerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DDBA822B3245E0084DEBD /* RandomBeerModel.swift */; };
 		6A6DDBAC22B328FA0084DEBD /* BeerListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DDBAB22B328FA0084DEBD /* BeerListCell.swift */; };
+		6A9634AA234B123000A841FB /* BeerListViewController+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9634A9234B123000A841FB /* BeerListViewController+SwiftUI.swift */; };
 		6AC29F2F22D6F83A00B416F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC29F2E22D6F83A00B416F0 /* ViewController.swift */; };
 		6AC29F3122D6FB8300B416F0 /* Reactive+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC29F3022D6FB8300B416F0 /* Reactive+UIViewController.swift */; };
 		6AC29F3A22D7042200B416F0 /* BeersDummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC29F3922D7042200B416F0 /* BeersDummyData.swift */; };
@@ -77,6 +78,7 @@
 		6A6DDBA622B324570084DEBD /* RandomBeerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomBeerViewModel.swift; sourceTree = "<group>"; };
 		6A6DDBA822B3245E0084DEBD /* RandomBeerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomBeerModel.swift; sourceTree = "<group>"; };
 		6A6DDBAB22B328FA0084DEBD /* BeerListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListCell.swift; sourceTree = "<group>"; };
+		6A9634A9234B123000A841FB /* BeerListViewController+SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BeerListViewController+SwiftUI.swift"; sourceTree = "<group>"; };
 		6AC29F2E22D6F83A00B416F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6AC29F3022D6FB8300B416F0 /* Reactive+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reactive+UIViewController.swift"; sourceTree = "<group>"; };
 		6AC29F3922D7042200B416F0 /* BeersDummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersDummyData.swift; sourceTree = "<group>"; };
@@ -150,10 +152,8 @@
 		6A6DDB9B22B323EC0084DEBD /* Beer List */ = {
 			isa = PBXGroup;
 			children = (
-				7DE0575122B20BFE002002D7 /* BeerListViewController.swift */,
-				7DAC7F3022B227C4004D032B /* BeerListViewModel.swift */,
-				7DAC7F3222B22801004D032B /* BeerListModel.swift */,
-				6A6DDBAA22B328EB0084DEBD /* Components */,
+				6A9634A8234B118A00A841FB /* SwiftUI */,
+				6A9634A7234B118000A841FB /* Legacy */,
 			);
 			path = "Beer List";
 			sourceTree = "<group>";
@@ -184,6 +184,25 @@
 				6A6DDBAB22B328FA0084DEBD /* BeerListCell.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		6A9634A7234B118000A841FB /* Legacy */ = {
+			isa = PBXGroup;
+			children = (
+				7DE0575122B20BFE002002D7 /* BeerListViewController.swift */,
+				7DAC7F3022B227C4004D032B /* BeerListViewModel.swift */,
+				7DAC7F3222B22801004D032B /* BeerListModel.swift */,
+				6A6DDBAA22B328EB0084DEBD /* Components */,
+			);
+			path = Legacy;
+			sourceTree = "<group>";
+		};
+		6A9634A8234B118A00A841FB /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				6A9634A9234B123000A841FB /* BeerListViewController+SwiftUI.swift */,
+			);
+			path = SwiftUI;
 			sourceTree = "<group>";
 		};
 		6AC29F2D22D6F82500B416F0 /* Universal Component */ = {
@@ -675,6 +694,7 @@
 				7DAC7F1F22B21932004D032B /* Ingredients.swift in Sources */,
 				6AC29F3122D6FB8300B416F0 /* Reactive+UIViewController.swift in Sources */,
 				7DAC7F2D22B223DC004D032B /* PunkNetwork.swift in Sources */,
+				6A9634AA234B123000A841FB /* BeerListViewController+SwiftUI.swift in Sources */,
 				7DAC7F1D22B21908004D032B /* BeerMethod.swift in Sources */,
 				6A6DDB9822B319B10084DEBD /* MainViewController.swift in Sources */,
 				6A6DDB9A22B322540084DEBD /* MainViewModel.swift in Sources */,

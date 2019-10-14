@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,7 +17,6 @@
 		6A6DDBA722B324570084DEBD /* RandomBeerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DDBA622B324570084DEBD /* RandomBeerViewModel.swift */; };
 		6A6DDBA922B3245E0084DEBD /* RandomBeerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DDBA822B3245E0084DEBD /* RandomBeerModel.swift */; };
 		6A6DDBAC22B328FA0084DEBD /* BeerListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DDBAB22B328FA0084DEBD /* BeerListCell.swift */; };
-		6A9634AA234B123000A841FB /* BeerListViewController+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9634A9234B123000A841FB /* BeerListViewController+SwiftUI.swift */; };
 		6AC29F2F22D6F83A00B416F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC29F2E22D6F83A00B416F0 /* ViewController.swift */; };
 		6AC29F3122D6FB8300B416F0 /* Reactive+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC29F3022D6FB8300B416F0 /* Reactive+UIViewController.swift */; };
 		6AC29F3A22D7042200B416F0 /* BeersDummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC29F3922D7042200B416F0 /* BeersDummyData.swift */; };
@@ -40,6 +39,12 @@
 		7DE0575222B20BFE002002D7 /* BeerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE0575122B20BFE002002D7 /* BeerListViewController.swift */; };
 		7DE0575722B20BFF002002D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DE0575622B20BFF002002D7 /* Assets.xcassets */; };
 		7DE0575A22B20BFF002002D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DE0575822B20BFF002002D7 /* LaunchScreen.storyboard */; };
+		7DEAA0BD23549DA3006A0C2F /* BeerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEAA0BC23549DA3006A0C2F /* BeerRow.swift */; };
+		7DEAA0C12354A155006A0C2F /* BeerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEAA0C02354A155006A0C2F /* BeerList.swift */; };
+		7DEAA0C42354A237006A0C2F /* PunkNetwork+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEAA0C32354A237006A0C2F /* PunkNetwork+Combine.swift */; };
+		7DEAA0C72354ABD5006A0C2F /* BeerListViewModel+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEAA0C62354ABD5006A0C2F /* BeerListViewModel+Combine.swift */; };
+		7DEAA0C92354B2E9006A0C2F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEAA0C82354B2E9006A0C2F /* SceneDelegate.swift */; };
+		7DEAA0CB2354B302006A0C2F /* AppDelegate+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEAA0CA2354B302006A0C2F /* AppDelegate+SwiftUI.swift */; };
 		8FF588B12AE79E134035E802 /* Pods_BringMyOwnBeer_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10B1A7CCCEA99181FB46165E /* Pods_BringMyOwnBeer_Tests.framework */; };
 		B6A66147C9FD4C839D31DBF8 /* Pods_BringMyOwnBeer_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B0A9B7964CD5F536ACB9E0 /* Pods_BringMyOwnBeer_UITests.framework */; };
 /* End PBXBuildFile section */
@@ -78,7 +83,6 @@
 		6A6DDBA622B324570084DEBD /* RandomBeerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomBeerViewModel.swift; sourceTree = "<group>"; };
 		6A6DDBA822B3245E0084DEBD /* RandomBeerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomBeerModel.swift; sourceTree = "<group>"; };
 		6A6DDBAB22B328FA0084DEBD /* BeerListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListCell.swift; sourceTree = "<group>"; };
-		6A9634A9234B123000A841FB /* BeerListViewController+SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BeerListViewController+SwiftUI.swift"; sourceTree = "<group>"; };
 		6AC29F2E22D6F83A00B416F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6AC29F3022D6FB8300B416F0 /* Reactive+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reactive+UIViewController.swift"; sourceTree = "<group>"; };
 		6AC29F3922D7042200B416F0 /* BeersDummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersDummyData.swift; sourceTree = "<group>"; };
@@ -107,6 +111,12 @@
 		7DE0576622B20BFF002002D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DE0576B22B20BFF002002D7 /* BringMyOwnBeer🍺UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BringMyOwnBeer🍺UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DE0577122B20BFF002002D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DEAA0BC23549DA3006A0C2F /* BeerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerRow.swift; sourceTree = "<group>"; };
+		7DEAA0C02354A155006A0C2F /* BeerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerList.swift; sourceTree = "<group>"; };
+		7DEAA0C32354A237006A0C2F /* PunkNetwork+Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PunkNetwork+Combine.swift"; sourceTree = "<group>"; };
+		7DEAA0C62354ABD5006A0C2F /* BeerListViewModel+Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BeerListViewModel+Combine.swift"; sourceTree = "<group>"; };
+		7DEAA0C82354B2E9006A0C2F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7DEAA0CA2354B302006A0C2F /* AppDelegate+SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+SwiftUI.swift"; sourceTree = "<group>"; };
 		898CB17EAB63D8C84B16C032 /* Pods_BringMyOwnBeer_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BringMyOwnBeer_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B89A9AE4EA8408C15E53F162 /* Pods-BringMyOwnBeer🍺.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BringMyOwnBeer🍺.debug.xcconfig"; path = "Target Support Files/Pods-BringMyOwnBeer🍺/Pods-BringMyOwnBeer🍺.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,7 +162,7 @@
 		6A6DDB9B22B323EC0084DEBD /* Beer List */ = {
 			isa = PBXGroup;
 			children = (
-				6A9634A8234B118A00A841FB /* SwiftUI */,
+				6A9634A8234B118A00A841FB /* SwiftUI+Combine */,
 				6A9634A7234B118000A841FB /* Legacy */,
 			);
 			path = "Beer List";
@@ -197,12 +207,14 @@
 			path = Legacy;
 			sourceTree = "<group>";
 		};
-		6A9634A8234B118A00A841FB /* SwiftUI */ = {
+		6A9634A8234B118A00A841FB /* SwiftUI+Combine */ = {
 			isa = PBXGroup;
 			children = (
-				6A9634A9234B123000A841FB /* BeerListViewController+SwiftUI.swift */,
+				7DEAA0C02354A155006A0C2F /* BeerList.swift */,
+				7DEAA0C62354ABD5006A0C2F /* BeerListViewModel+Combine.swift */,
+				7DEAA0BC23549DA3006A0C2F /* BeerRow.swift */,
 			);
-			path = SwiftUI;
+			path = "SwiftUI+Combine";
 			sourceTree = "<group>";
 		};
 		6AC29F2D22D6F82500B416F0 /* Universal Component */ = {
@@ -254,7 +266,8 @@
 		7DAC7F0C22B20DD6004D032B /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				7DE0574F22B20BFE002002D7 /* AppDelegate.swift */,
+				7DEAA0CC2354B307006A0C2F /* Legacy */,
+				7DEAA0CD2354B310006A0C2F /* SwiftUI */,
 				7DAC7F0A22B20DA4004D032B /* Moya */,
 				7DAC7F2722B2238F004D032B /* Network */,
 				7DAC7F0F22B20E23004D032B /* Entity */,
@@ -300,8 +313,8 @@
 		7DAC7F2722B2238F004D032B /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				7DAC7F2C22B223DC004D032B /* PunkNetwork.swift */,
-				7DAC7F2A22B223BC004D032B /* PunkNetworkImpl.swift */,
+				7DEAA0C52354A241006A0C2F /* Combine */,
+				7DEAA0C22354A228006A0C2F /* Legacy */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -353,6 +366,40 @@
 				7DE0577122B20BFF002002D7 /* Info.plist */,
 			);
 			path = "BringMyOwnBeer🍺UITests";
+			sourceTree = "<group>";
+		};
+		7DEAA0C22354A228006A0C2F /* Legacy */ = {
+			isa = PBXGroup;
+			children = (
+				7DAC7F2C22B223DC004D032B /* PunkNetwork.swift */,
+				7DAC7F2A22B223BC004D032B /* PunkNetworkImpl.swift */,
+			);
+			path = Legacy;
+			sourceTree = "<group>";
+		};
+		7DEAA0C52354A241006A0C2F /* Combine */ = {
+			isa = PBXGroup;
+			children = (
+				7DEAA0C32354A237006A0C2F /* PunkNetwork+Combine.swift */,
+			);
+			path = Combine;
+			sourceTree = "<group>";
+		};
+		7DEAA0CC2354B307006A0C2F /* Legacy */ = {
+			isa = PBXGroup;
+			children = (
+				7DE0574F22B20BFE002002D7 /* AppDelegate.swift */,
+			);
+			path = Legacy;
+			sourceTree = "<group>";
+		};
+		7DEAA0CD2354B310006A0C2F /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				7DEAA0CA2354B302006A0C2F /* AppDelegate+SwiftUI.swift */,
+				7DEAA0C82354B2E9006A0C2F /* SceneDelegate.swift */,
+			);
+			path = SwiftUI;
 			sourceTree = "<group>";
 		};
 		9A8380D3F62A4067F3F58E20 /* Pods */ = {
@@ -506,26 +553,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BringMyOwnBeer🍺Tests/Pods-BringMyOwnBeer🍺Tests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
-				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
-				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
-				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-BringMyOwnBeer🍺Tests/Pods-BringMyOwnBeer🍺Tests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-BringMyOwnBeer🍺Tests/Pods-BringMyOwnBeer🍺Tests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -560,26 +592,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BringMyOwnBeer🍺UITests/Pods-BringMyOwnBeer🍺UITests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
-				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
-				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
-				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-BringMyOwnBeer🍺UITests/Pods-BringMyOwnBeer🍺UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-BringMyOwnBeer🍺UITests/Pods-BringMyOwnBeer🍺UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -636,44 +653,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BringMyOwnBeer🍺/Pods-BringMyOwnBeer🍺-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
-				"${BUILT_PRODUCTS_DIR}/RxAppState/RxAppState.framework",
-				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
-				"${BUILT_PRODUCTS_DIR}/RxKeyboard/RxKeyboard.framework",
-				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
-				"${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-BringMyOwnBeer🍺/Pods-BringMyOwnBeer🍺-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAppState.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxKeyboard.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toaster.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-BringMyOwnBeer🍺/Pods-BringMyOwnBeer🍺-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -689,12 +673,14 @@
 			files = (
 				6AC29F2F22D6F83A00B416F0 /* ViewController.swift in Sources */,
 				6AC29F4122D7215200B416F0 /* Observable+Optional.swift in Sources */,
+				7DEAA0C92354B2E9006A0C2F /* SceneDelegate.swift in Sources */,
 				7DE0575222B20BFE002002D7 /* BeerListViewController.swift in Sources */,
 				7DAC7F2F22B225F1004D032B /* PunkErrorData.swift in Sources */,
+				7DEAA0C72354ABD5006A0C2F /* BeerListViewModel+Combine.swift in Sources */,
+				7DEAA0CB2354B302006A0C2F /* AppDelegate+SwiftUI.swift in Sources */,
 				7DAC7F1F22B21932004D032B /* Ingredients.swift in Sources */,
 				6AC29F3122D6FB8300B416F0 /* Reactive+UIViewController.swift in Sources */,
 				7DAC7F2D22B223DC004D032B /* PunkNetwork.swift in Sources */,
-				6A9634AA234B123000A841FB /* BeerListViewController+SwiftUI.swift in Sources */,
 				7DAC7F1D22B21908004D032B /* BeerMethod.swift in Sources */,
 				6A6DDB9822B319B10084DEBD /* MainViewController.swift in Sources */,
 				6A6DDB9A22B322540084DEBD /* MainViewModel.swift in Sources */,
@@ -703,12 +689,15 @@
 				6A6DDB9F22B3242E0084DEBD /* SingleBeerViewController.swift in Sources */,
 				7DAC7F3322B22801004D032B /* BeerListModel.swift in Sources */,
 				6AC29F4322D721A400B416F0 /* Result.swift in Sources */,
+				7DEAA0C12354A155006A0C2F /* BeerList.swift in Sources */,
 				7DAC7F3122B227C4004D032B /* BeerListViewModel.swift in Sources */,
 				7DAC7F1722B21060004D032B /* BeerFilterComponents.swift in Sources */,
+				7DEAA0BD23549DA3006A0C2F /* BeerRow.swift in Sources */,
 				6A6DDBA722B324570084DEBD /* RandomBeerViewModel.swift in Sources */,
 				6A6DDBA522B3244F0084DEBD /* RandomBeerViewController.swift in Sources */,
 				6A6DDBA122B324390084DEBD /* SingleBeerViewModel.swift in Sources */,
 				7DE0575022B20BFE002002D7 /* AppDelegate.swift in Sources */,
+				7DEAA0C42354A237006A0C2F /* PunkNetwork+Combine.swift in Sources */,
 				6A6DDBA922B3245E0084DEBD /* RandomBeerModel.swift in Sources */,
 				7DAC7F1B22B218C2004D032B /* Beer.swift in Sources */,
 				7DAC7F2B22B223BC004D032B /* PunkNetworkImpl.swift in Sources */,

@@ -17,7 +17,7 @@ struct RandomBeerModel {
         self.punkNetwork = punkNetwork
     }
     
-    func getRandomBeer() -> Single<Result<Beer, PunkNetworkError>> {
+    func getRandomBeer() -> Observable<Result<[Beer], PunkNetworkError>> {
         return punkNetwork.getRandomBeer()
     }
     

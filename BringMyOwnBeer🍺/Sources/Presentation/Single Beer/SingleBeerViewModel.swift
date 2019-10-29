@@ -26,7 +26,7 @@ struct SingleBeerViewModel: SingleBeerViewBindable {
                 guard case .success(let value) = result else {
                     return nil
                 }
-                return value
+                return value.first
             }
             .filterNil()
         

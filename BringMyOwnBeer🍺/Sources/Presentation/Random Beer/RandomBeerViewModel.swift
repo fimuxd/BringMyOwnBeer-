@@ -29,6 +29,7 @@ struct RandomBeerViewModel: RandomBeerViewBindable {
             .filterNilValue { $0.error?.message }
         
         self.selectedBeerData = beerValue
+            .filterNilValue { $0.first }
             .filterNilValue(model.parseData)
             .asSignal(onErrorSignalWith: .empty())
         

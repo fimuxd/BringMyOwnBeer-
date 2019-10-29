@@ -24,6 +24,8 @@
 		6AC29F3F22D70A1600B416F0 /* RandomBeerModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC29F3E22D70A1600B416F0 /* RandomBeerModelTests.swift */; };
 		6AC29F4122D7215200B416F0 /* Observable+Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC29F4022D7215200B416F0 /* Observable+Optional.swift */; };
 		6AC29F4322D721A400B416F0 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC29F4222D721A400B416F0 /* Result.swift */; };
+		7D4B0F9923681B7D00C19834 /* PunkNetworkImpl + URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4B0F9823681B7D00C19834 /* PunkNetworkImpl + URLSession.swift */; };
+		7D4B0F9B23681BAE00C19834 /* PunkNetwork + URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4B0F9A23681BAE00C19834 /* PunkNetwork + URLSession.swift */; };
 		7DAC7F1222B20E55004D032B /* PunkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAC7F1122B20E55004D032B /* PunkAPI.swift */; };
 		7DAC7F1422B20EEA004D032B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAC7F1322B20EEA004D032B /* Constants.swift */; };
 		7DAC7F1722B21060004D032B /* BeerFilterComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAC7F1622B21060004D032B /* BeerFilterComponents.swift */; };
@@ -81,6 +83,8 @@
 		6AC29F3E22D70A1600B416F0 /* RandomBeerModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomBeerModelTests.swift; sourceTree = "<group>"; };
 		6AC29F4022D7215200B416F0 /* Observable+Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Optional.swift"; sourceTree = "<group>"; };
 		6AC29F4222D721A400B416F0 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		7D4B0F9823681B7D00C19834 /* PunkNetworkImpl + URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PunkNetworkImpl + URLSession.swift"; sourceTree = "<group>"; };
+		7D4B0F9A23681BAE00C19834 /* PunkNetwork + URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PunkNetwork + URLSession.swift"; sourceTree = "<group>"; };
 		7DAC7F1122B20E55004D032B /* PunkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunkAPI.swift; sourceTree = "<group>"; };
 		7DAC7F1322B20EEA004D032B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7DAC7F1622B21060004D032B /* BeerFilterComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerFilterComponents.swift; sourceTree = "<group>"; };
@@ -283,6 +287,8 @@
 			children = (
 				7DAC7F2C22B223DC004D032B /* PunkNetwork.swift */,
 				7DAC7F2A22B223BC004D032B /* PunkNetworkImpl.swift */,
+				7D4B0F9A23681BAE00C19834 /* PunkNetwork + URLSession.swift */,
+				7D4B0F9823681B7D00C19834 /* PunkNetworkImpl + URLSession.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -487,26 +493,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BringMyOwnBeer🍺Tests/Pods-BringMyOwnBeer🍺Tests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
-				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
-				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
-				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-BringMyOwnBeer🍺Tests/Pods-BringMyOwnBeer🍺Tests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-BringMyOwnBeer🍺Tests/Pods-BringMyOwnBeer🍺Tests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -541,26 +532,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BringMyOwnBeer🍺UITests/Pods-BringMyOwnBeer🍺UITests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
-				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
-				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
-				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-BringMyOwnBeer🍺UITests/Pods-BringMyOwnBeer🍺UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-BringMyOwnBeer🍺UITests/Pods-BringMyOwnBeer🍺UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -575,44 +551,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-BringMyOwnBeer🍺/Pods-BringMyOwnBeer🍺-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BringMyOwnBeer🍺/Pods-BringMyOwnBeer🍺-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
-				"${BUILT_PRODUCTS_DIR}/RxAppState/RxAppState.framework",
-				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
-				"${BUILT_PRODUCTS_DIR}/RxKeyboard/RxKeyboard.framework",
-				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
-				"${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework",
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-BringMyOwnBeer🍺/Pods-BringMyOwnBeer🍺-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAppState.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxKeyboard.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toaster.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -673,6 +614,7 @@
 				6AC29F2F22D6F83A00B416F0 /* ViewController.swift in Sources */,
 				6AC29F4122D7215200B416F0 /* Observable+Optional.swift in Sources */,
 				7DE0575222B20BFE002002D7 /* BeerListViewController.swift in Sources */,
+				7D4B0F9B23681BAE00C19834 /* PunkNetwork + URLSession.swift in Sources */,
 				7DAC7F2F22B225F1004D032B /* PunkErrorData.swift in Sources */,
 				7DAC7F1F22B21932004D032B /* Ingredients.swift in Sources */,
 				6AC29F3122D6FB8300B416F0 /* Reactive+UIViewController.swift in Sources */,
@@ -686,6 +628,7 @@
 				7DAC7F3322B22801004D032B /* BeerListModel.swift in Sources */,
 				6AC29F4322D721A400B416F0 /* Result.swift in Sources */,
 				7DAC7F3122B227C4004D032B /* BeerListViewModel.swift in Sources */,
+				7D4B0F9923681B7D00C19834 /* PunkNetworkImpl + URLSession.swift in Sources */,
 				7DAC7F1722B21060004D032B /* BeerFilterComponents.swift in Sources */,
 				6A6DDBA722B324570084DEBD /* RandomBeerViewModel.swift in Sources */,
 				6A6DDBA522B3244F0084DEBD /* RandomBeerViewController.swift in Sources */,
@@ -867,13 +810,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4U9BR6CX43;
 				INFOPLIST_FILE = "BringMyOwnBeer🍺/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.devfimuxd.BringMyOwnBeer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -886,13 +830,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4U9BR6CX43;
 				INFOPLIST_FILE = "BringMyOwnBeer🍺/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.devfimuxd.BringMyOwnBeer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

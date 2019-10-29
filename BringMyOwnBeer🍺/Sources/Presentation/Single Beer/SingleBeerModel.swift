@@ -16,7 +16,7 @@ struct SingleBeerModel {
         self.punkNetwork = punkNetwork
     }
     
-    func getSingleBeer(id: String) -> Single<Result<Beer, PunkNetworkError>> {
+    func getSingleBeer(id: String) -> Observable<Result<[Beer], PunkNetworkError>> {
         return punkNetwork.getBeer(id: id)
     }
     

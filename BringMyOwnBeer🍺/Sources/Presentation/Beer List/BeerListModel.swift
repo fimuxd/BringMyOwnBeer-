@@ -16,8 +16,8 @@ struct BeerListModel {
         self.punkNetwork = punkNetwork
     }
     
-    func getBeerList() -> Single<Result<[Beer], PunkNetworkError>> {
-        return punkNetwork.getBeers(components: BeerFilterComponents(), page: nil, perPage: nil)
+    func getBeerList() -> Observable<Result<[Beer], PunkNetworkError>> {
+        return punkNetwork.getBeers(page: nil)
     }
     
     func parseData(value: [Beer]) -> [BeerListCell.Data] {
@@ -26,9 +26,9 @@ struct BeerListModel {
         }
     }
     
-    func fetchMoreData(from: Int) -> Single<Result<[Beer], PunkNetworkError>> {
+    func fetchMoreData(from: Int) -> Observable<Result<[Beer], PunkNetworkError>> {
         // 총 325개
         let page = (from + 1)/25 + 1
-        return punkNetwork.getBeers(components: BeerFilterComponents(), page: page, perPage: 25)
+        return punkNetwork.getBeers(page: page)
     }
 }

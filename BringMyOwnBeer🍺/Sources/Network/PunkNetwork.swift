@@ -1,32 +1,30 @@
-////
-////  PunkNetwork.swift
-////  BringMyOwnBeer🍺
-////
-////  Created by Boyoung Park on 13/06/2019.
-////  Copyright © 2019 Boyoung Park. All rights reserved.
-////
 //
-//import Foundation
-//import RxSwift
+//  PunkNetwork.swift
+//  BringMyOwnBeer🍺
 //
-//enum PunkNetworkError: Error {
-//    case error(String)
-//    case defaultError
-//    
-//    var message: String? {
-//        switch self {
-//        case let .error(msg):
-//            return msg
-//        case .defaultError:
-//            return "잠시 후에 다시 시도해주세요."
-//        }
-//    }
-//}
+//  Created by Bo-Young PARK on 2019/10/29.
+//  Copyright © 2019 Boyoung Park. All rights reserved.
 //
-//protocol PunkNetwork {
-//    typealias BeerResult<T> = Result<T, PunkNetworkError>
-//    
-//    func getBeers(components: BeerFilterComponents, page: Int?, perPage: Int?) -> Single<BeerResult<[Beer]>>
-//    func getBeer(id: String) -> Single<BeerResult<Beer>>
-//    func getRandomBeer() -> Single<BeerResult<Beer>>
-//}
+
+import Foundation
+import RxSwift
+
+enum PunkNetworkError: Error {
+    case error(String)
+    case defaultError
+    
+    var message: String? {
+        switch self {
+        case let .error(msg):
+            return msg
+        case .defaultError:
+            return "잠시 후에 다시 시도해주세요."
+        }
+    }
+}
+
+protocol PunkNetwork {
+    func getBeers(page: Int?) -> Observable<Result<[Beer], PunkNetworkError>>
+    func getBeer(id: String) -> Observable<Result<[Beer], PunkNetworkError>>
+    func getRandomBeer() -> Observable<Result<[Beer], PunkNetworkError>>
+}

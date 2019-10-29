@@ -10,7 +10,6 @@ target 'BringMyOwnBeer🍺' do
   pod 'RxSwift', '~> 4.4.0'
   pod 'RxCocoa', '~> 4.4.0'
   pod 'RxOptional', '~> 3.6.2'
-  pod 'Moya/RxSwift', '~> 12.0.1'
   pod 'RxKeyboard', '~> 0.9.0'
   pod 'RxAppState'
   pod 'RxDataSources', '~> 3.1.0'

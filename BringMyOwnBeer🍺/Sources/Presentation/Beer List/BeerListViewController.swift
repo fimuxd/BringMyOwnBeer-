@@ -92,7 +92,7 @@ class BeerListViewController: UIViewController {
             $0.backgroundColor = .white
             $0.register(BeerListCell.self, forCellReuseIdentifier: String(describing: BeerListCell.self))
             $0.separatorStyle = .singleLine
-            $0.rowHeight = UITableView.automaticDimension
+            $0.rowHeight = UITableViewAutomaticDimension
             $0.estimatedRowHeight = 160
         }
     }

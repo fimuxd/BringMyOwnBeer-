@@ -1,16 +1,8 @@
 PODS:
-  - Alamofire (4.8.2)
   - Differentiator (3.1.0)
   - Kingfisher (4.10.1)
-  - Moya/Core (12.0.1):
-    - Alamofire (~> 4.1)
-    - Result (~> 4.0)
-  - Moya/RxSwift (12.0.1):
-    - Moya/Core
-    - RxSwift (~> 4.0)
   - Nimble (8.0.2)
   - Quick (1.3.4)
-  - Result (4.1.0)
   - RxAppState (1.5.0):
     - RxCocoa (~> 4.4)
     - RxSwift (~> 4.4)
@@ -39,7 +31,6 @@ PODS:
 
 DEPENDENCIES:
   - Kingfisher (~> 4.10.1)
-  - Moya/RxSwift (~> 12.0.1)
   - Nimble (~> 8.0.0)
   - Quick (~> 1.3.1)
   - RxAppState
@@ -56,13 +47,10 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
-    - Alamofire
     - Differentiator
     - Kingfisher
-    - Moya
     - Nimble
     - Quick
-    - Result
     - RxAppState
     - RxAtomic
     - RxBlocking
@@ -77,13 +65,10 @@ SPEC REPOS:
     - Toaster
 
 SPEC CHECKSUMS:
-  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
-  Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
   Nimble: 622629381bda1dd5678162f21f1368cec7cbba60
   Quick: f4f7f063c524394c73ed93ac70983c609805d481
-  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   RxAppState: 46cae19e582daf7283a8f9ef553e7c049e1565b4
   RxAtomic: d00e97c10db88c6f08540e0bf2752fc5a2404167
   RxBlocking: 79413e4d916f44bb3e113c5b2cc059e36fe58910
@@ -97,6 +82,6 @@ SPEC CHECKSUMS:
   Then: 71866660c7af35a7343831f7668e7cd2b62ee0f2
   Toaster: a6c9532de1ded8105e77376f7dffeb2e12b46dbb
 
-PODFILE CHECKSUM: b7cc24aa49c1bb049513a3dd05d4fb409513cfef
+PODFILE CHECKSUM: 40af1741cc4f5d8f03824484297ed0554bb9cc30
 
 COCOAPODS: 1.8.3

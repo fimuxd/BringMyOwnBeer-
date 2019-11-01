@@ -14,9 +14,11 @@ import SnapKit
 import Toaster
 
 protocol BeerListViewBindable {
+    //View -> ViewModel
     var viewWillAppear: PublishSubject<Void> { get }
-    var itemSelected: PublishRelay<Int> { get }
     var willDisplayCell: PublishRelay<IndexPath> { get }
+    
+    //ViewModel -> View
     var cellData: Driver<[BeerListCell.Data]> { get }
     var reloadList: Signal<Void> { get }
     var errorMessage: Signal<String> { get }
@@ -47,11 +49,6 @@ class BeerListViewController: UIViewController {
         self.rx.viewWillAppear
             .map { _ in Void() }
             .bind(to: viewModel.viewWillAppear)
-            .disposed(by: disposeBag)
-        
-        tableView.rx.itemSelected
-            .map { $0.row }
-            .bind(to: viewModel.itemSelected)
             .disposed(by: disposeBag)
         
         tableView.rx.willDisplayCell

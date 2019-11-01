@@ -16,7 +16,6 @@ struct BeerListViewModel: BeerListViewBindable {
     
     let viewWillAppear = PublishSubject<Void>()
     let cellData: Driver<[BeerListCell.Data]>
-    let itemSelected = PublishRelay<Int>()
     let willDisplayCell = PublishRelay<IndexPath>()
     let reloadList: Signal<Void>
     let errorMessage: Signal<String>
@@ -100,6 +99,7 @@ struct BeerListViewModel: BeerListViewBindable {
                 return newList.isEmpty ? [] : prev + newList
             }
             .bind(to: cells)
+            .disposed(by: disposeBag)
         
         self.cellData = cells
             .map(model.parseData)

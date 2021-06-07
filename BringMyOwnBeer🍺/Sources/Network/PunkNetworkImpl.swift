@@ -11,17 +11,17 @@ import RxSwift
 
 class PunkNetworkImpl: PunkNetwork {
     private let session: URLSession
-    
+
     init(session: URLSession = .shared) {
         self.session = session
     }
-    
+
     func getBeers(page: Int?) -> Observable<Result<[Beer], PunkNetworkError>> {
         guard let url = makeGetBeersComponents(page: page).url else {
             let error = PunkNetworkError.error("유효하지 않은 URL")
             return .just(.failure(error))
         }
-        
+
         return session.rx.data(request: URLRequest(url: url))
             .map { data in
                 do {
@@ -32,13 +32,13 @@ class PunkNetworkImpl: PunkNetwork {
                 }
             }
     }
-    
+
     func getBeer(id: String) -> Observable<Result<[Beer], PunkNetworkError>> {
         guard let url = makeGetBeerComponents(id: id).url else {
             let error = PunkNetworkError.error("유효하지 않은 URL")
             return .just(.failure(error))
         }
-        
+
         return session.rx.data(request: URLRequest(url: url))
             .map { data in
                 do {
@@ -49,13 +49,13 @@ class PunkNetworkImpl: PunkNetwork {
                 }
             }
     }
-    
+
     func getRandomBeer() -> Observable<Result<[Beer], PunkNetworkError>> {
         guard let url = makeGetRandomBeerComponents().url else {
             let error = PunkNetworkError.error("유효하지 않은 URL")
             return .just(.failure(error))
         }
-        
+
         return session.rx.data(request: URLRequest(url: url))
             .map { data in
                 do {
@@ -69,12 +69,12 @@ class PunkNetworkImpl: PunkNetwork {
 }
 
 private extension PunkNetworkImpl {
-    struct PunkAPI {
+    enum PunkAPI {
         static let scheme = "https"
         static let host = "api.punkapi.com"
         static let path = "/v2/beers"
     }
-    
+
     func makeGetBeersComponents(page: Int?) -> URLComponents {
         var components = URLComponents()
         components.scheme = PunkAPI.scheme
@@ -90,25 +90,25 @@ private extension PunkNetworkImpl {
                 URLQueryItem(name: "per_page", value: "80")
             ]
         }
-        
+
         return components
     }
-    
+
     func makeGetBeerComponents(id: String) -> URLComponents {
         var components = URLComponents()
         components.scheme = PunkAPI.scheme
         components.host = PunkAPI.host
         components.path = PunkAPI.path + "/\(id)"
-        
+
         return components
     }
-    
+
     func makeGetRandomBeerComponents() -> URLComponents {
         var components = URLComponents()
         components.scheme = PunkAPI.scheme
         components.host = PunkAPI.host
         components.path = PunkAPI.path + "/random"
-        
+
         return components
     }
 }

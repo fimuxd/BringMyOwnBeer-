@@ -15,15 +15,15 @@ extension Result {
         }
         return value
     }
-    
+
     var error: Failure? {
         guard case .failure(let error) = self else {
             return nil
         }
         return error
     }
-    
+
     var isSuccess: Bool {
-        return value != nil
+        value != nil
     }
 }

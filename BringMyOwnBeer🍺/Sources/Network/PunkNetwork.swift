@@ -12,7 +12,7 @@ import RxSwift
 enum PunkNetworkError: Error {
     case error(String)
     case defaultError
-    
+
     var message: String? {
         switch self {
         case let .error(msg):

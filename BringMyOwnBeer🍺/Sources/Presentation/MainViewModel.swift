@@ -7,14 +7,14 @@
 //
 
 import Foundation
-import RxSwift
 import RxCocoa
+import RxSwift
 
 struct MainViewModel: MainViewBindable {
     let beerListViewModel: BeerListViewBindable
     let singleBeerViewModel: SingleBeerViewBindable
     let randomBeerViewModel: RandomBeerViewBindable
-    
+
     init() {
         self.beerListViewModel = BeerListViewModel()
         self.singleBeerViewModel = SingleBeerViewModel()

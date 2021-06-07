@@ -1,42 +1,24 @@
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '13.0'
+
+use_frameworks!
+inhibit_all_warnings!
 
 def pods
-  pod 'RxSwift'
-  pod 'RxCocoa'
+  pod 'RxSwift', '~> 6'
+  pod 'RxCocoa', '~> 6'
   pod 'RxViewController'
   pod 'RxKeyboard'
-  pod 'ReactorKit'
+  pod 'ReactorKit', '~> 3'
 
-  pod 'SnapKit'
+  pod 'SnapKit', '~> 5'
   pod 'Then'
-  pod 'Toaster'
-  pod 'Kingfisher'
-end
+  pod 'Toaster', '~> 2.3'
+  pod 'SDWebImage', '~> 5.11'
 
-def pods_for_test
-  pod 'Quick', '~> 1.3.1'
-  pod 'Nimble', '~> 8.0.0'
-  pod 'RxBlocking', '~> 4.0'
-  pod 'RxTest',     '~> 4.0'
+  pod 'SwiftLint'
 end
 
 target 'BringMyOwnBeer🍺' do
-  use_frameworks!
-
   pods
-end
-
-target 'BringMyOwnBeer🍺Tests' do
-  use_frameworks!
-
-  pods
-  pods_for_test
-end
-
-target 'BringMyOwnBeer🍺UITests' do
-  use_frameworks!
-
-  pods
-  pods_for_test
 end

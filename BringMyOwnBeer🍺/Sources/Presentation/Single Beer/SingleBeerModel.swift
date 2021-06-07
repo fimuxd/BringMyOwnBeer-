@@ -11,16 +11,16 @@ import RxSwift
 
 struct SingleBeerModel {
     let punkNetwork: PunkNetwork
-    
+
     init(punkNetwork: PunkNetwork = PunkNetworkImpl()) {
         self.punkNetwork = punkNetwork
     }
-    
+
     func getSingleBeer(id: String) -> Observable<Result<[Beer], PunkNetworkError>> {
-        return punkNetwork.getBeer(id: id)
+        punkNetwork.getBeer(id: id)
     }
-    
+
     func parseData(value: Beer) -> BeerListCell.Data? {
-        return (id: value.id ?? 0, name: value.name ?? "", description: value.description ?? "", imageURL: value.imageURL ?? "")
+        (id: value.id ?? 0, name: value.name ?? "", description: value.description ?? "", imageURL: value.imageURL ?? "")
     }
 }

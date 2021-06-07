@@ -8,8 +8,8 @@
 
 import Foundation
 
-public struct URLs {
-    struct API {
+public enum URLs {
+    enum API {
         static let gateway = "https://api.punkapi.com"
     }
 }

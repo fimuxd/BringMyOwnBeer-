@@ -18,7 +18,7 @@ struct Beer: Codable {
     let method: BeerMethod?
     let ingredients: Ingredients?
     let foodParing: [String]?
-    
+
     enum CodingKeys: String, CodingKey {
         case id, name, tagline, description, abv, ibu, ebc, srm, ph, volume, method, ingredients
         case firstBrewed = "first_brewed"
@@ -31,13 +31,13 @@ struct Beer: Codable {
         case brewersTips = "brewers_tips"
         case contributedBy = "contributed_by"
     }
-    
+
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         let date = try values.decode(String.self, forKey: .firstBrewed)
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM-yyyy"
-        
+
         self.id = try? values.decode(Int.self, forKey: .id)
         self.name = try? values.decode(String.self, forKey: .name)
         self.tagline = try? values.decode(String.self, forKey: .tagline)

@@ -1,87 +1,72 @@
 PODS:
-  - Differentiator (3.1.0)
-  - Kingfisher (4.10.1)
-  - Nimble (8.0.2)
+  - Kingfisher (6.3.0)
+  - Nimble (8.0.9)
   - Quick (1.3.4)
-  - RxAppState (1.5.0):
-    - RxCocoa (~> 4.4)
-    - RxSwift (~> 4.4)
-  - RxAtomic (4.4.2)
+  - ReactorKit (1.2.1):
+    - RxSwift (>= 4.0.0)
   - RxBlocking (4.5.0):
     - RxSwift (>= 4.4.2, ~> 4.4)
-  - RxCocoa (4.4.2):
+  - RxCocoa (4.5.0):
     - RxSwift (>= 4.4.2, ~> 4.4)
-  - RxDataSources (3.1.0):
-    - Differentiator (~> 3.0)
-    - RxCocoa (~> 4.0)
-    - RxSwift (~> 4.0)
   - RxKeyboard (0.9.0):
     - RxCocoa (>= 4.3.1)
     - RxSwift (>= 4.3.1)
-  - RxOptional (3.6.2):
-    - RxCocoa (~> 4.0)
-    - RxSwift (~> 4.0)
-  - RxSwift (4.4.2):
-    - RxAtomic (>= 4.4.2, ~> 4.4)
+  - RxSwift (4.5.0)
   - RxTest (4.5.0):
     - RxSwift (>= 4.4.2, ~> 4.4)
-  - SnapKit (4.2.0)
-  - Then (2.4.0)
-  - Toaster (2.1.1)
+  - RxViewController (0.4.1):
+    - RxCocoa (>= 4.0.0)
+    - RxSwift (>= 4.0.0)
+  - SnapKit (5.0.1)
+  - Then (2.7.0)
+  - Toaster (2.3.0)
 
 DEPENDENCIES:
-  - Kingfisher (~> 4.10.1)
+  - Kingfisher
   - Nimble (~> 8.0.0)
   - Quick (~> 1.3.1)
-  - RxAppState
+  - ReactorKit
   - RxBlocking (~> 4.0)
-  - RxCocoa (~> 4.4.0)
-  - RxDataSources (~> 3.1.0)
-  - RxKeyboard (~> 0.9.0)
-  - RxOptional (~> 3.6.2)
-  - RxSwift (~> 4.4.0)
+  - RxCocoa
+  - RxKeyboard
+  - RxSwift
   - RxTest (~> 4.0)
-  - SnapKit (~> 4.2.0)
-  - Then (~> 2.4.0)
-  - Toaster (~> 2.1.0)
+  - RxViewController
+  - SnapKit
+  - Then
+  - Toaster
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
-    - Differentiator
+  trunk:
     - Kingfisher
     - Nimble
     - Quick
-    - RxAppState
-    - RxAtomic
+    - ReactorKit
     - RxBlocking
     - RxCocoa
-    - RxDataSources
     - RxKeyboard
-    - RxOptional
     - RxSwift
     - RxTest
+    - RxViewController
     - SnapKit
     - Then
     - Toaster
 
 SPEC CHECKSUMS:
-  Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
-  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
-  Nimble: 622629381bda1dd5678162f21f1368cec7cbba60
+  Kingfisher: 6c3df386db71d82c0817a429d2c9421a77396529
+  Nimble: 98b888285a615fd34f20e61753cf58ea1402bde4
   Quick: f4f7f063c524394c73ed93ac70983c609805d481
-  RxAppState: 46cae19e582daf7283a8f9ef553e7c049e1565b4
-  RxAtomic: d00e97c10db88c6f08540e0bf2752fc5a2404167
+  ReactorKit: 8be57f0527ad1ac2963cd5c338274a46a01e57a3
   RxBlocking: 79413e4d916f44bb3e113c5b2cc059e36fe58910
-  RxCocoa: 477990dc3b4c3ff55fb0ac77e1cc06244e0aaec8
-  RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
+  RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
   RxKeyboard: 4f782303f499f41577b41c96c6a9a5d7acd51a47
-  RxOptional: 80426a0ddbd092573e4c482d8cc13302078c4d5e
-  RxSwift: 74c29b693c8e42b0f64400e8b06564575742d649
+  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   RxTest: 3ccb66bfbace0bf7df1c43a7c75d046f8ce60372
-  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  Then: 71866660c7af35a7343831f7668e7cd2b62ee0f2
-  Toaster: a6c9532de1ded8105e77376f7dffeb2e12b46dbb
+  RxViewController: e93e7c233d5b5b62c32231d69726d55f54081bc6
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  Then: acfe0be7e98221c6204e12f8161459606d5d822d
+  Toaster: c3473963c78e8cabbf6ea6f11ad0fdaae6f54987
 
-PODFILE CHECKSUM: 40af1741cc4f5d8f03824484297ed0554bb9cc30
+PODFILE CHECKSUM: 3f349c20a16c3e423a86f16bf61c441107cc1b52
 
-COCOAPODS: 1.8.3
+COCOAPODS: 1.10.0

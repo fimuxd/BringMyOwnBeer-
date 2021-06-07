@@ -4,7 +4,7 @@
 - RxSwift, ReactorKit, RxFlow
 - SnapKit, PinLayout, FlexLayout
 - Nimble
-- Tuist, Fastlane
+- Tuist, Fastlane, SwiftLint
 
 ## About BringMyOwnBeer🍺
 - [@fimuxd](https://github.com/fimuxd)님의 [BringMyOwnBeer](https://github.com/fimuxd/BringMyOwnBeer-) 프로젝트를 위 기술을 통해 재구현해보는 예제 프로젝트
